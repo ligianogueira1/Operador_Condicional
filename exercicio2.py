@@ -10,4 +10,4 @@ value = int(input("To start, enter your age: "))
 if value >= 18:
     print(f"You are of legal age. ")
 else:
-    print(f"You are underage")
+    print(f"You are underage.")
