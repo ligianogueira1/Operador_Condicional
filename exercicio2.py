@@ -8,6 +8,6 @@ print("======================")
 value = int(input("To start, enter your age: "))
 
 if value >= 18:
-    print(f"You are of legal age. ")
+    print("You are of legal age.")
 else:
-    print(f"You are underage.")
+    print("You are underage.")
