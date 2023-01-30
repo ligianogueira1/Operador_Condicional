@@ -10,40 +10,40 @@
 #Se a pessoa responder positivamente a 2 questões, ela deve ser classificada como "Suspeita"; entre 3 e 4, como "Cúmplice"; e 5, como "Assassina". Caso contrário, ela será classificada como "Inocente".
 
 print("======================")
-print("Investigação do crime")
+print("Crime investigation")
 print("======================")
 
-perguntas = [
-    "Falou com a vítima no dia do crime? \n",
-    "Esteve no local do crime? \n",
-    "Mora perto da vítima? \n",
-    "Devia dinheiro para a vítima? \n",
-    "Já trabalhou com a vítima? \n"
+questions = [
+    "Did you talk to the victim on the day of the crime? \n",
+    "Were you been at the crime scene? \n",
+    "Do you live near the victim? \n",
+    "Did you owe the victim money? \n",
+    "Have you ever worked with the victim? \n"
 ]
 
-respostas = 0
+answers = 0
 
-for p in perguntas:
-    r = input(p)
-    if r == "Sim" or r == "sim":
-        respostas += 1
-    elif r == "Não" or r == "não":
+for q in questions:
+    a = input(q)
+    if a == "Yes" or a == "yes":
+        answers += 1
+    elif a == "No" or a == "no":
         continue
     else:
-        r = input(p)
-        while(r != "Sim" or r != "sim" or r != "Não" or r!= "não"):
-            r = input(p)
-            if r == "Sim" or r == "sim":
-                respostas += 1
+        a = input(q)
+        while(a != "Yes" or a != "yes" or a != "No" or a!= "no"):
+            a = input(q)
+            if a == "Yes" or a == "yes":
+                answers += 1
                 break
-            elif r == "Não" or r == "não":
+            elif a == "No" or a == "no":
                 break
 
-if respostas == 5:
-    print("Esta pessoa é a assassina do crime!")
-elif respostas == 3 or respostas == 4:
-    print("Esta pessoa é cúmplice do assassinato!")
-elif respostas == 2:
-    print("Esta pessoa é suspeita do crime!")
+if answers == 5:
+    print("This person is the crime killer!")
+elif answers == 3 or answers == 4:
+    print("This person is an accomplice to the murder!")
+elif answers == 2:
+    print("This person is suspected of the crime!")
 else:
-    print("Esta pessoa é inocente!")
+    print("This person is innocent!")
